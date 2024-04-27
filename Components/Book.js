@@ -4,7 +4,9 @@ import { View, Text, Button, Image, ProgressBarAndroid } from "react-native";
 import BOOK_STYLES from "../Styles/Book";
 
 function Book(props) {
-  const { navigation, title, imagePath, content_title, content_subtitle, content_text, progress, func } =
+  const { navigation, 
+          title, imagePath, content_title, content_subtitle, content_text, 
+          progress, func = null} = 
     props;
 
   return (
@@ -28,9 +30,9 @@ function Book(props) {
       <View style={BOOK_STYLES.button}>
         <Button 
           title="Seguir leyendo..." 
-          
+
           // AGREGAR PARÁMETROS AAAAAAAAAAAAAAAAAAAAAA
-          onPress={() =>  navigation.navigate("Lecture", { additionalParam: value })} 
+          onPress={() =>  navigation.navigate("Lecture", { title })} 
           />
       </View>
     </View>

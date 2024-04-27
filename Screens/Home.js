@@ -4,7 +4,7 @@ import { FlatList } from "react-native-gesture-handler";
 
 import Book from "../Components/Book";
 import BOOK_DATA from "../Data/Book-data";
-import HOME_STYLES from "../Styles/Home";
+// import HOME_STYLES from "../Styles/Home";
 import GENERAL_STYLES from "../Styles/GeneralStyles";
 
 function Home({ navigation }) {

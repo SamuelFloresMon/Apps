@@ -1,15 +1,32 @@
+import React from "react";
+import { Text } from "react-native";
 
-import React from 'react';
-import { View, Text } from 'react-native';
+import LectureContent from '../Components/Lecture';
 
-import BOOK_CONTENT from '../Data/Book-content';
+import LECTURE_STYLES from "../Styles/Lecture";
+import BOOK_CONTENT from "../Data/Book-content";
 
-function Lecture (props){
+function Lecture(props) {
+  const { navigation, route } = props;
+  const { title } = route.params;
+
+  const contentLecture = [];
+  const numOfRepetitions = 7;
+
+  for (let i = 0; i < numOfRepetitions; i++) {
+    contentLecture.push(
+      <Text key={i} style={LECTURE_STYLES.text}>
+        {BOOK_CONTENT.spanish.content}
+      </Text> 
+    );
+  }
+
+  // console.log(additionalParam);
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>{BOOK_CONTENT.spanish.content}</Text>
-    </View>
+    <LectureContent title={title}>
+      {contentLecture}
+    </LectureContent>
   );
-};
+}
 
 export default Lecture;

@@ -6,7 +6,9 @@ const LOGIN_STYLES = StyleSheet.create({
       alignItems: "center",
       backgroundColor: '#ccc',
       padding: 10,
-      borderRadius: 7
+      borderRadius: 7,
+      borderColor: '#000',
+      borderWidth: 1
     },
     header: {
       fontSize: 40,

@@ -20,7 +20,9 @@ const BOOK_STYLES = StyleSheet.create({
     title: {
       fontSize: 30,
       fontWeight: 'bold',
-      marginTop: 9
+      marginTop: 9,
+      borderBottomColor: "#ccc",
+      borderBottomWidth: 1,
     },
     content_title: {
       backgroundColor: '#fff',
@@ -28,7 +30,7 @@ const BOOK_STYLES = StyleSheet.create({
       fontSize: 20,
       alignSelf: "flex-start",
       marginLeft: 20 ,
-      marginBottom: 10
+      marginBottom: 10,
     },
     content_subtitle: {
       backgroundColor: '#fff',
